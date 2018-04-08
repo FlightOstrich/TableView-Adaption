@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MineNewsViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    MineNewsViewController * mineVC = [[MineNewsViewController alloc] init];
+    UINavigationController *navc = [[UINavigationController alloc]initWithRootViewController:mineVC];
+    self.window.rootViewController = navc;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
